@@ -1,0 +1,79 @@
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	padding: 2rem;
+	outline: solid red;
+	background: linear-gradient(
+		-190deg,
+		oklch(84.62% 0.0427 181.45) 70%,
+		rgb(255, 255, 255) 30%
+	);
+}
+
+img {
+	max-width: 25rem;
+}
+
+h1 {
+	/* color: #D6B3B0; */
+}
+
+h2 {
+	padding-bottom: 1rem;
+}
+.header-content-container {
+	max-width: 970px;
+	outline: solid blue;
+	margin-inline: auto;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.name-container {
+	position: relative;
+	color: rgb(255, 255, 255);
+	font-size: 1.5rem;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.name-text {
+	position: absolute;
+	bottom: 0.58rem;
+	left: 8.5rem;
+}
+
+.header-text-container {
+	/* outline: solid green; */
+	padding: 4rem 1.5rem;
+	background-color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	border-radius: 0 2px 2px 0;
+}
+
+.about-me-text {
+	padding-bottom: 3rem;
+}
+
+.icon-container {
+	display: flex;
+	flex-direction: row;
+	gap: 0.75rem;
+	justify-content: flex-end;
+}
+
+.icon {
+	width: 32px;
+	height: auto;
+	transition: transform 250ms ease-in-out;
+}
+
+.icon:hover {
+	transform: scale(1.1);
+}
