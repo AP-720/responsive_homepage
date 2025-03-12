@@ -7,11 +7,10 @@ body {
 header {
 	padding: 2rem;
 	outline: solid red;
-	background: linear-gradient(
-		-190deg,
-		oklch(84.62% 0.0427 181.45) 70%,
-		rgb(255, 255, 255) 30%
-	);
+	background-image: url(/images/diagonal-bg.svg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	
 }
 
 img {
