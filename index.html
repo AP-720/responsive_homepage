@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="./css/styles.css" />
 	</head>
 	<body>
-		<header>
+		<header class="about-me-header">
 			<div class="header-content-container">
 				<div class="name-container">
 					<h1 class="name-text">John Smith</h1>
@@ -20,8 +20,8 @@
 						srcset=""
 					/>
 				</div>
-				<div class="header-text-container">
-					<h2>About Me</h2>
+				<section class="about-section">
+					<h2 class="about-me-heading">About Me</h2>
 					<p class="about-me-text">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
 						dolore quos. Nobis ratione corrupti dignissimos quae libero quas
@@ -32,35 +32,50 @@
 						facilis repudiandae dolores reprehenderit sapiente labore cupiditate
 						nam?
 					</p>
-					<div class="icon-container">
-						<a href="#" aria-label="Visit my GitHub profile">
-							<img
-								class="icon"
-								src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-								alt="github logo"
-							/>
-						</a>
-						<a href="#" aria-label="Visit my linkedin profile">
-							<img
-								class="icon"
-								src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
-								alt="linkedin logo"
-							/>
-						</a>
-						<a href="#" aria-label="Visit my website">
-							<img class="icon" src="icons/web.svg" alt="website logo" />
-						</a>
-					</div>
-				</div>
+					<nav class="social-navigation" aria-label="Social media links">
+						<ul class="icon-container">
+							<li>
+								<a href="#" aria-label="Visit my GitHub profile">
+									<img
+										class="icon"
+										src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+										alt="github logo"
+									/>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Visit my linkedin profile">
+									<img
+										class="icon"
+										src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
+										alt="linkedin logo"
+									/>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Visit my website">
+									<img class="icon" src="icons/web.svg" alt="website logo" />
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</section>
 			</div>
 		</header>
 		<main>
 			<div class="main-container">
-				<h3>My Work</h3>
+				<header class="main-content-heading">
+					<h2 class="">My Work</h2>
+				</header>
+
 				<div class="project-card-container">
-					<div class="card">
-						<img class="project-image" src="images/Project-Cover.jpg" alt="" srcset="">
-						<div class="project-card-title">
+					<article class="card">
+						<img
+							class="project-image"
+							src="images/Project-Cover.jpg"
+							alt="Screenshot of Project Name interface"
+						/>
+						<header class="project-card-heading">
 							<h4>Project Name</h4>
 							<div class="icon-container">
 								<a href="#" aria-label="Visit my GitHub profile">
@@ -71,15 +86,26 @@
 									/>
 								</a>
 								<a href="#" aria-label="Visit my website">
-									<img class="icon small" src="icons/open-in-new.svg" alt="open project in new window" />
+									<img
+										class="icon small"
+										src="icons/open-in-new.svg"
+										alt="open project in new window"
+									/>
 								</a>
 							</div>
-						</div>
-						<p class="project-text">Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-					<div class="card">
-						<img class="project-image" src="images/Project-Cover.jpg" alt="" srcset="">
-						<div class="project-card-title">
+						</header>
+						<p class="project-text">
+							Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit.
+						</p>
+					</article>
+					<article class="card">
+						<img
+							class="project-image"
+							src="images/Project-Cover.jpg"
+							alt="Screenshot of Project Name interface"
+						/>
+						<header class="project-card-heading">
 							<h4>Project Name</h4>
 							<div class="icon-container">
 								<a href="#" aria-label="Visit my GitHub profile">
@@ -90,15 +116,26 @@
 									/>
 								</a>
 								<a href="#" aria-label="Visit my website">
-									<img class="icon small" src="icons/open-in-new.svg" alt="open project in new window" />
+									<img
+										class="icon small"
+										src="icons/open-in-new.svg"
+										alt="open project in new window"
+									/>
 								</a>
 							</div>
-						</div>
-						<p class="project-text">Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit amet consectetur adipisicing elit. lore</p>
-					</div>
-					<div class="card">
-						<img class="project-image" src="images/Project-Cover.jpg" alt="" srcset="">
-						<div class="project-card-title">
+						</header>
+						<p class="project-text">
+							Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit.
+						</p>
+					</article>
+					<article class="card">
+						<img
+							class="project-image"
+							src="images/Project-Cover.jpg"
+							alt="Screenshot of Project Name interface"
+						/>
+						<header class="project-card-heading">
 							<h4>Project Name</h4>
 							<div class="icon-container">
 								<a href="#" aria-label="Visit my GitHub profile">
@@ -109,15 +146,26 @@
 									/>
 								</a>
 								<a href="#" aria-label="Visit my website">
-									<img class="icon small" src="icons/open-in-new.svg" alt="open project in new window" />
+									<img
+										class="icon small"
+										src="icons/open-in-new.svg"
+										alt="open project in new window"
+									/>
 								</a>
 							</div>
-						</div>
-						<p class="project-text">Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-					<div class="card">
-						<img class="project-image" src="images/Project-Cover.jpg" alt="" srcset="">
-						<div class="project-card-title">
+						</header>
+						<p class="project-text">
+							Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit.
+						</p>
+					</article>
+					<article class="card">
+						<img
+							class="project-image"
+							src="images/Project-Cover.jpg"
+							alt="Screenshot of Project Name interface"
+						/>
+						<header class="project-card-heading">
 							<h4>Project Name</h4>
 							<div class="icon-container">
 								<a href="#" aria-label="Visit my GitHub profile">
@@ -128,15 +176,26 @@
 									/>
 								</a>
 								<a href="#" aria-label="Visit my website">
-									<img class="icon small" src="icons/open-in-new.svg" alt="open project in new window" />
+									<img
+										class="icon small"
+										src="icons/open-in-new.svg"
+										alt="open project in new window"
+									/>
 								</a>
 							</div>
-						</div>
-						<p class="project-text">Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-					<div class="card">
-						<img class="project-image" src="images/Project-Cover.jpg" alt="" srcset="">
-						<div class="project-card-title">
+						</header>
+						<p class="project-text">
+							Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit.
+						</p>
+					</article>
+					<article class="card">
+						<img
+							class="project-image"
+							src="images/Project-Cover.jpg"
+							alt="Screenshot of Project Name interface"
+						/>
+						<header class="project-card-heading">
 							<h4>Project Name</h4>
 							<div class="icon-container">
 								<a href="#" aria-label="Visit my GitHub profile">
@@ -147,15 +206,26 @@
 									/>
 								</a>
 								<a href="#" aria-label="Visit my website">
-									<img class="icon small" src="icons/open-in-new.svg" alt="open project in new window" />
+									<img
+										class="icon small"
+										src="icons/open-in-new.svg"
+										alt="open project in new window"
+									/>
 								</a>
 							</div>
-						</div>
-						<p class="project-text">Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-					<div class="card">
-						<img class="project-image" src="images/Project-Cover.jpg" alt="" srcset="">
-						<div class="project-card-title">
+						</header>
+						<p class="project-text">
+							Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit.
+						</p>
+					</article>
+					<article class="card">
+						<img
+							class="project-image"
+							src="images/Project-Cover.jpg"
+							alt="Screenshot of Project Name interface"
+						/>
+						<header class="project-card-heading">
 							<h4>Project Name</h4>
 							<div class="icon-container">
 								<a href="#" aria-label="Visit my GitHub profile">
@@ -166,12 +236,19 @@
 									/>
 								</a>
 								<a href="#" aria-label="Visit my website">
-									<img class="icon small" src="icons/open-in-new.svg" alt="open project in new window" />
+									<img
+										class="icon small"
+										src="icons/open-in-new.svg"
+										alt="open project in new window"
+									/>
 								</a>
 							</div>
-						</div>
-						<p class="project-text">Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-					</div>
+						</header>
+						<p class="project-text">
+							Lorem ipsum dolor sit amet consectetur elit Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit.
+						</p>
+					</article>
 				</div>
 			</div>
 		</main>
