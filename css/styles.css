@@ -1,3 +1,22 @@
+:root {
+	/* Colours */
+	--colour-primary: oklch(84.62% 0.0427 181.45);
+	--colour-background: #ffffff;
+	--colour-text: #000000;
+
+	/* Spacing */
+	--spacing-small: 0.5rem;
+	--spacing-medium: 1rem;
+	--spacing-large: 2rem;
+	--spacing-xl: 3rem;
+
+	/* Shadows */
+	--heading-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	--card-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+		rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -20,19 +39,17 @@ h1 {
 }
 
 h2 {
-	padding-bottom: 1rem;
+	padding-bottom: var(--spacing-medium);
 }
 
 h3 {
-	padding: 2rem 0 1rem 0;
+	padding: var(--spacing-large) 0 var(--spacing-medium) 0;
 	font-size: 1.5rem;
 }
 
 .header-content-container {
 	max-width: 970px;
-	/* padding-top: 2rem;
-	padding-bottom: 2rem; */
-	padding: 2rem;
+	padding: var(--spacing-large);
 	outline: solid blue;
 	margin-inline: auto;
 	display: flex;
@@ -55,21 +72,20 @@ h3 {
 
 .header-text-container {
 	/* outline: solid green; */
-	padding: 3rem 1.5rem;
+	padding: var(--spacing-xl) var(--spacing-medium);
 	background-color: rgb(255, 255, 255);
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	box-shadow: var(--heading-shadow);
 	border-radius: 0 2px 2px 0;
 }
 
 .about-me-text {
-	padding-bottom: 3rem;
+	padding-bottom: var(--spacing-xl);
 }
 
 .icon-container {
 	display: flex;
 	flex-direction: row;
-	gap: 0.5rem;
+	gap: var(--spacing-small);
 	justify-content: flex-end;
 }
 
@@ -91,37 +107,33 @@ h3 {
 	max-width: 970px;
 	margin-inline: auto;
 	border: solid palevioletred;
-	padding: 2rem;
+	padding: var(--spacing-large);
 }
 
 .project-card-container {
 	display: grid;
-	gap: 2rem;
+	gap: var(--spacing-large);
 	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .card {
 	max-width: 300px;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	box-shadow: var(--card-shadow);
 }
 
 .project-image {
 	max-width: 100%;
 	height: auto;
-	padding-bottom: 1rem;
+	padding-bottom: var(--spacing-medium);
 }
 
 .project-card-title {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-bottom: 1rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	padding: 0 var(--spacing-small) var(--spacing-medium) var(--spacing-small);
 }
 
 .project-text {
-	padding-bottom: 2.5rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	padding: 0 var(--spacing-small) var(--spacing-xl) var(--spacing-small);
 }
