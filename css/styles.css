@@ -50,6 +50,7 @@ address {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 a:hover {
@@ -198,8 +199,7 @@ a:hover {
 	margin-inline: auto;
 	padding: var(--spacing-large);
 	display: grid;
-	grid-template-columns: 20rem 1fr;
-	grid-area: var(--spacing-medium);
+	grid-template-columns: minmax(15rem, 1fr) minmax(0, 1.5fr);
 	gap: var(--spacing-medium);
 }
 
@@ -220,34 +220,27 @@ a:hover {
 	gap: var(--spacing-medium);
 }
 
-a[href^="tel"]::before {
+.contact-icon::before {
 	content: "";
 	display: inline-block;
 	width: 22px;
 	height: 22px;
 	vertical-align: middle;
 	margin-right: var(--spacing-small);
-	/* Using the mask proerty to change the colour of the svg */
-	mask: url("/icons/phone.svg");
+	/* Using the mask property to change the colour of the svg */
 	mask-size: contain;
 	mask-repeat: no-repeat;
 	mask-position: center;
 	background-color: var(--colour-text-secondary);
 }
 
-a[href^="mailto"]::before {
-	content: "";
-	display: inline-block;
-	width: 22px;
-	height: 22px;
-	vertical-align: middle;
-	margin-right: var(--spacing-small);
+a[href^="tel"]::before {
+	/* Using the mask property to change the colour of the svg */
+	mask: url("/icons/phone.svg");
+}
 
+a[href^="mailto"]::before {
 	mask: url(/icons/email-outline.svg);
-	mask-size: contain;
-	mask-repeat: no-repeat;
-	mask-position: center;
-	background-color: var(--colour-text-secondary);
 }
 
 .footer-image {
