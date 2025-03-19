@@ -1,6 +1,6 @@
 :root {
 	/* Content Width */
-	--width-large: 970px;
+	--width-large: 980px;
 
 	/* Colours */
 	--colour-primary: oklch(84.62% 0.0427 181.45);
@@ -30,6 +30,8 @@ body {
 }
 
 h1 {
+	font-size: 3.25rem;
+	text-wrap: nowrap;
 	/* color: #D6B3B0; */
 }
 
@@ -68,35 +70,44 @@ a:hover {
 
 .header-content-container {
 	max-width: var(--width-large);
-	padding: var(--spacing-large);
-	outline: solid blue;
+	padding: var(--spacing-xl);
+	padding-top: 4rem;
+	border: solid blue;
 	margin-inline: auto;
-	display: flex;
-	align-items: center;
+	/* display: flex;
+	justify-content: center; 
+	align-items: center; 
+	position: relative; */
 }
 
-.name-container {
-	position: relative;
+.hero-container {
+	position: absolute;
+	right: 100%;
+	top: 50%;
+	transform: translateY(-50%);
 	color: rgb(255, 255, 255);
 	font-size: 1.5rem;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
-.name-text {
+.name-overlay {
 	position: absolute;
-	bottom: 0.4rem;
-	left: 4.75rem;
+	bottom: 1%;
+	left: 18%;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .header-image {
 	max-width: 25rem;
-	width: 100%; /* Make responsive */
+	height: 100%;
 }
 
 .about-section {
-	padding: var(--spacing-xl) var(--spacing-medium);
+	position: relative;
+	width: 60%;
+	margin-left: auto;
+	padding: var(--spacing-large) var(--spacing-large);
 	background-color: var(--colour-background);
 	box-shadow: var(--heading-shadow);
 	border-radius: 0 2px 2px 0;
@@ -107,7 +118,7 @@ a:hover {
 }
 
 .about-me-text {
-	padding-bottom: var(--spacing-xl);
+	padding-bottom: var(--spacing-large);
 }
 
 /* Icons */
@@ -143,7 +154,7 @@ a:hover {
 	max-width: var(--width-large);
 	margin-inline: auto;
 	border: solid palevioletred;
-	padding: var(--spacing-large);
+	padding: var(--spacing-xl);
 	padding-bottom: var(--spacing-xl);
 }
 
@@ -156,11 +167,11 @@ a:hover {
 .project-card-container {
 	display: grid;
 	gap: var(--spacing-large);
-	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(15.75rem, 1fr));
 }
 
 .card {
-	max-width: 300px;
+	max-width: 350px;
 	box-shadow: var(--card-shadow);
 	height: 100%;
 	display: flex;
@@ -244,8 +255,62 @@ a[href^="mailto"]::before {
 }
 
 .footer-image {
-	max-height: 25rem;
-	width: 100%;
+	/* min-width: 20rem; */
 	aspect-ratio: 5/4;
-	object-fit: cover;
+	/* object-fit: cover; */
+}
+
+@media (width <= 920px) {
+	.header-content-container {
+		padding-top: 8rem;
+	}
+
+	.about-section {
+		margin-inline: auto;
+		width: 75%;
+		padding-top: var(--spacing-xl);
+		padding-bottom: var(--spacing-xl);
+	}
+
+	.about-me-heading {
+		text-align: center;
+	}
+
+	.about-me-text {
+		/* margin: 0 auto; */
+		padding-bottom: var(--spacing-small);
+	}
+
+	.hero-container {
+		position: static;
+		/* right: 50%;
+		top: 50%; */
+		transform: translateY(0);
+		float: left;
+		margin-bottom: var(--spacing-small);
+		margin-right: var(--spacing-medium);
+
+		margin-top: -22%;
+		margin-left: -25%;
+		/* margin-right: var(--spacing-medium); */
+	}
+
+	.header-content-container {
+	}
+
+	.header-image {
+		/* float: left; */
+	}
+
+	.name-overlay {
+		position: absolute;
+		bottom: 0;
+		left: 62%;
+		top: 3%;
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+	}
+
+	.header-content-container .social-navigation {
+		display: none;
+	}
 }
