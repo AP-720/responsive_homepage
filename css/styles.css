@@ -1,5 +1,6 @@
 :root {
 	/* Content Width */
+	--width-medium: 50rem;
 	--width-large: 980px;
 
 	/* Colours */
@@ -71,7 +72,6 @@ a:hover {
 .header-content-container {
 	max-width: var(--width-large);
 	padding: var(--spacing-xl);
-	padding-top: 4rem;
 	border: solid blue;
 	margin-inline: auto;
 	/* display: flex;
@@ -107,7 +107,7 @@ a:hover {
 	position: relative;
 	width: 60%;
 	margin-left: auto;
-	padding: var(--spacing-large) var(--spacing-large);
+	padding: var(--spacing-xl) var(--spacing-large);
 	background-color: var(--colour-background);
 	box-shadow: var(--heading-shadow);
 	border-radius: 0 2px 2px 0;
@@ -155,7 +155,6 @@ a:hover {
 	margin-inline: auto;
 	border: solid palevioletred;
 	padding: var(--spacing-xl);
-	padding-bottom: var(--spacing-xl);
 }
 
 .main-content-heading {
@@ -171,7 +170,7 @@ a:hover {
 }
 
 .card {
-	max-width: 350px;
+	max-width: 400px;
 	box-shadow: var(--card-shadow);
 	height: 100%;
 	display: flex;
@@ -255,21 +254,19 @@ a[href^="mailto"]::before {
 }
 
 .footer-image {
-	/* min-width: 20rem; */
-	aspect-ratio: 5/4;
+	/* aspect-ratio: 5/4; */
 	/* object-fit: cover; */
 }
 
 @media (width <= 920px) {
 	.header-content-container {
-		padding-top: 8rem;
+		padding-top: 6rem;
 	}
 
 	.about-section {
 		margin-inline: auto;
-		width: 75%;
-		padding-top: var(--spacing-xl);
-		padding-bottom: var(--spacing-xl);
+		width: 100%;
+		padding: var(--spacing-xl) var(--spacing-large);
 	}
 
 	.about-me-heading {
@@ -277,7 +274,7 @@ a[href^="mailto"]::before {
 	}
 
 	.about-me-text {
-		/* margin: 0 auto; */
+		margin-left: auto;
 		padding-bottom: var(--spacing-small);
 	}
 
@@ -287,15 +284,16 @@ a[href^="mailto"]::before {
 		top: 50%; */
 		transform: translateY(0);
 		float: left;
-		margin-bottom: var(--spacing-small);
+		margin-bottom: var(--spacing-medium);
 		margin-right: var(--spacing-medium);
 
-		margin-top: -22%;
-		margin-left: -25%;
+		margin-top: -18%;
+		margin-left: -10%;
 		/* margin-right: var(--spacing-medium); */
 	}
 
 	.header-content-container {
+		max-width: var(--width-medium);
 	}
 
 	.header-image {
@@ -306,11 +304,25 @@ a[href^="mailto"]::before {
 		position: absolute;
 		bottom: 0;
 		left: 62%;
-		top: 3%;
+		top: 2%;
 		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 	}
 
 	.header-content-container .social-navigation {
 		display: none;
+	}
+
+	.main-container {
+		max-width: var(--width-medium);
+		padding: 0 var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
+	}
+
+	.footer-container {
+		max-width: var(--width-medium);
+	}
+
+	.footer-image {
+		width: 100%;
+		aspect-ratio: 4/5;
 	}
 }
