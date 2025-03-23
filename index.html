@@ -14,24 +14,33 @@
 				<section class="about-section">
 					<div class="hero-container">
 						<h1 class="name-overlay">John Smith</h1>
-						<img
-							class="header-image"
-							src="/images/image_01_350w.jpg"
-							alt=""
-							srcset=""
-						/>
+						<picture>
+							<source
+								media="(max-width: 635px)"
+								srcset="../images/image_01_285w_crop.jpg"
+							/>
+							<img
+								class="header-image"
+								src="../images/image_01_350w.jpg"
+								alt=""
+								srcset=""
+							/>
+						</picture>
 					</div>
 
-					<h2 class="about-me-heading">About Me</h2>
-					<p class="about-me-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-						nemo eius maxime accusantium modi ab voluptate, quisquam laboriosam
-						velit nam a perferendis quae voluptatibus natus iure inventore fuga,
-						debitis tempora. Lorem ipsum dolor sit amet consectetur adipisicing
-						elit. Quo voluptatibus cumque ratione iure quae nam excepturi
-						nesciunt maxime sapiente officiis exercitationem dolorum asperiores,
-						expedita ducimus dolore iste voluptatum qui? Modi.
-					</p>
+					<div class="about-me-text-container">
+						<h2 class="about-me-heading">About Me</h2>
+						<p class="about-me-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+							nemo eius maxime accusantium modi ab voluptate, quisquam
+							laboriosam velit nam a perferendis quae voluptatibus natus iure
+							inventore fuga, debitis tempora. Lorem ipsum dolor sit amet
+							consectetur adipisicing elit. Quo voluptatibus cumque ratione iure
+							quae nam excepturi nesciunt maxime sapiente officiis
+							exercitationem dolorum asperiores, expedita ducimus dolore iste
+							voluptatum qui? Modi.
+						</p>
+					</div>
 
 					<nav class="social-navigation" aria-label="Social media links">
 						<ul class="icon-container">
@@ -66,7 +75,7 @@
 		<main>
 			<div class="main-container">
 				<header class="main-content-heading">
-					<h2 class="">My Work</h2>
+					<h2 class="main-header">My Work</h2>
 				</header>
 
 				<div class="project-card-container">
@@ -303,9 +312,14 @@
 				</div>
 				<picture>
 					<source
+						media="(max-width: 635px)"
+						srcset="../images/image_02_400w_Port_Crop.jpg"
+					/>
+					<source
 						media="(max-width: 920px)"
 						srcset="images/image_02_400w_Port.jpg"
 					/>
+
 					<img class="footer-image" src="/images/image_02_600w.jpg" alt="" />
 				</picture>
 			</div>

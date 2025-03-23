@@ -16,6 +16,11 @@
 	--spacing-large: 2rem;
 	--spacing-xl: 3rem;
 
+	/* Font Sizing */
+	--fs-xl: 3.25rem;
+	--fs-large: 2.25rem;
+	--fs-medium: 2rem;
+
 	/* Shadows */
 	--heading-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -31,16 +36,12 @@ body {
 }
 
 h1 {
-	font-size: 3.25rem;
+	font-size: var(--fs-xl);
 	text-wrap: nowrap;
-	/* color: #D6B3B0; */
-}
-
-h2 {
 }
 
 h3 {
-	font-size: 1.5rem;
+	font-size: var(--fs-medium);
 }
 
 ul {
@@ -63,7 +64,6 @@ a:hover {
 /* Header */
 
 .about-me-header {
-	outline: solid red;
 	background-image: url(/images/diagonal-bg.svg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -72,12 +72,7 @@ a:hover {
 .header-content-container {
 	max-width: var(--width-large);
 	padding: var(--spacing-xl);
-	border: solid blue;
 	margin-inline: auto;
-	/* display: flex;
-	justify-content: center; 
-	align-items: center; 
-	position: relative; */
 }
 
 .hero-container {
@@ -99,7 +94,7 @@ a:hover {
 }
 
 .header-image {
-	max-width: 25rem;
+	max-width: 30rem;
 	height: 100%;
 }
 
@@ -115,6 +110,7 @@ a:hover {
 
 .about-me-heading {
 	padding-bottom: var(--spacing-medium);
+	font-size: var(--fs-large);
 }
 
 .about-me-text {
@@ -153,7 +149,6 @@ a:hover {
 .main-container {
 	max-width: var(--width-large);
 	margin-inline: auto;
-	border: solid palevioletred;
 	padding: var(--spacing-xl);
 }
 
@@ -161,12 +156,16 @@ a:hover {
 	padding: var(--spacing-large) 0 var(--spacing-medium) 0;
 }
 
+.main-header {
+	font-size: var(--fs-large);
+}
+
 /* Project Cards */
 
 .project-card-container {
 	display: grid;
 	gap: var(--spacing-large);
-	grid-template-columns: repeat(auto-fit, minmax(15.75rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr));
 }
 
 .card {
@@ -204,7 +203,6 @@ a:hover {
 }
 
 .footer-container {
-	border: solid purple;
 	max-width: var(--width-large);
 	margin-inline: auto;
 	padding: var(--spacing-large);
@@ -214,7 +212,6 @@ a:hover {
 }
 
 .contact-text-container {
-	border: solid yellowgreen;
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-medium);
@@ -222,6 +219,7 @@ a:hover {
 
 .contact-heading {
 	padding-bottom: var(--spacing-medium);
+	font-size: var(--fs-large);
 }
 
 .footer-address {
@@ -253,12 +251,7 @@ a[href^="mailto"]::before {
 	mask: url(/icons/email-outline.svg);
 }
 
-.footer-image {
-	/* aspect-ratio: 5/4; */
-	/* object-fit: cover; */
-}
-
-@media (width <= 920px) {
+@media (635px <= width <= 920px) {
 	.header-content-container {
 		padding-top: 6rem;
 	}
@@ -280,24 +273,17 @@ a[href^="mailto"]::before {
 
 	.hero-container {
 		position: static;
-		/* right: 50%;
-		top: 50%; */
 		transform: translateY(0);
 		float: left;
 		margin-bottom: var(--spacing-medium);
 		margin-right: var(--spacing-medium);
-
+		/* To position outside the container */
 		margin-top: -18%;
 		margin-left: -10%;
-		/* margin-right: var(--spacing-medium); */
 	}
 
 	.header-content-container {
 		max-width: var(--width-medium);
-	}
-
-	.header-image {
-		/* float: left; */
 	}
 
 	.name-overlay {
@@ -324,5 +310,77 @@ a[href^="mailto"]::before {
 	.footer-image {
 		width: 100%;
 		aspect-ratio: 4/5;
+	}
+}
+
+@media (635px >= width) {
+	:root {
+		--fs-large: 1.8rem;
+	}
+
+	.header-content-container {
+		padding: var(--spacing-large);
+	}
+
+	.about-section {
+		width: 100%;
+		padding: var(--spacing-large);
+	}
+
+	.hero-container {
+		position: static;
+		transform: translateY(0);
+		margin-bottom: var(--spacing-large);
+	}
+
+	.header-image {
+		width: 100%;
+	}
+
+	.name-overlay {
+		bottom: 0;
+		text-wrap: wrap;
+	}
+
+	.about-me-text-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.icon-container {
+		justify-content: center;
+	}
+
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: var(--spacing-large);
+	}
+
+	.main-content-heading {
+		padding: var(--spacing-medium);
+	}
+
+	.card {
+		max-width: 100%;
+	}
+
+	.footer-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.footer-image {
+		width: 100%;
+	}
+
+	.contact-heading {
+		text-align: center;
 	}
 }
