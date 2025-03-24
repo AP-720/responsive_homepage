@@ -82,8 +82,7 @@ a:hover {
 	transform: translateY(-50%);
 	color: rgb(255, 255, 255);
 	font-size: 1.5rem;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	box-shadow: var(--card-shadow);
 }
 
 .name-overlay {
@@ -94,7 +93,7 @@ a:hover {
 }
 
 .header-image {
-	max-width: 30rem;
+	max-width: 40rem;
 	height: 100%;
 }
 
@@ -319,12 +318,14 @@ a[href^="mailto"]::before {
 	}
 
 	.header-content-container {
-		padding: var(--spacing-large);
+		padding: 0;
 	}
 
 	.about-section {
 		width: 100%;
 		padding: var(--spacing-large);
+		background-color: transparent;
+		box-shadow: none;
 	}
 
 	.hero-container {
@@ -339,7 +340,11 @@ a[href^="mailto"]::before {
 
 	.name-overlay {
 		bottom: 0;
-		text-wrap: wrap;
+		top: 90%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		text-wrap: nowrap;
 	}
 
 	.about-me-text-container {
@@ -347,6 +352,9 @@ a[href^="mailto"]::before {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		background-color: var(--colour-background);
+		padding: var(--spacing-large);
+		box-shadow: var(--heading-shadow);
 	}
 
 	.icon-container {
